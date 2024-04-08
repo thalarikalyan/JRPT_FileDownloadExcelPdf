@@ -19,7 +19,7 @@ pipeline{
         }
          stage("Deploy to Container"){
             steps{
-                deploy adapters: [tomcat9(credentialsId: 'admin_final_details', path: '', url: 'http://localhost:8888/')], contextPath: 'JRPT_FileDownloadExcelPDF', war: '**/*.war'
+               deploy adapters: [tomcat9(credentialsId: 'admin_final_details', path: '', url: 'http://localhost:8888/')], contextPath: 'JRPT_FileDownloadExcelPDF', war: '**/*.war'
             }
         }
         
